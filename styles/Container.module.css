@@ -1,0 +1,15 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.navbar {
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 1440px;
+    background-image: url("../img/bg.png");
+    background-position: -12px bottom;
+    background-repeat: no-repeat;
+  }
+}
