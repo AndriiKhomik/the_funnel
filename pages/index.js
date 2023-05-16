@@ -153,7 +153,7 @@ const Index = () => {
               </h2>
             </>
           )}
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             {showFrom === 1 && (
               <>
                 <label htmlFor="projectName" className={styles.label}>

@@ -13,13 +13,13 @@ const Projects = () => {
 
   return (
     <Container>
-      {!projects.length && (
+      {projects.length === 0 && (
         <h4 className={styles.title}>Please add your first project</h4>
       )}
       <h4 className={styles.title}>Projects</h4>
       <ul>
         {projects.length &&
-          projects.map((project, i) => (
+          projects?.map((project, i) => (
             <li key={`${project.projectName}-${i}`} className={styles.listItem}>
               <div className={styles.projectName}>{project.projectName}</div>
               <div className={styles.linkWrapper}>
