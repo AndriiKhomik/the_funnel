@@ -18,25 +18,26 @@ const Projects = () => {
       )}
       <h4 className={styles.title}>Projects</h4>
       <ul>
-        {projects.map((project, i) => (
-          <li key={`${project.projectName}-${i}`} className={styles.listItem}>
-            <div>Project name: {project.projectName}</div>
-            <div>Project Url: {project.projectUrl}</div>
-            <div>email: {project.email}</div>
-            <div>Project goal: {project.goal}</div>
-            <div>Workers amount: {project.workers}</div>
-            <div>Launch method: {project.launchMethod}</div>
-            <div>
-              <span className={styles.categoryTitle}>Categories:</span>
+        {projects.length &&
+          projects.map((project, i) => (
+            <li key={`${project.projectName}-${i}`} className={styles.listItem}>
+              <div>Project name: {project.projectName}</div>
+              <div>Project Url: {project.projectUrl}</div>
+              <div>email: {project.email}</div>
+              <div>Project goal: {project.goal}</div>
+              <div>Workers amount: {project.workers}</div>
+              <div>Launch method: {project.launchMethod}</div>
+              <div>
+                <span className={styles.categoryTitle}>Categories:</span>
 
-              {project.categories.map((category) => (
-                <span key={category} className={styles.categoryItem}>
-                  {category}
-                </span>
-              ))}
-            </div>
-          </li>
-        ))}
+                {project.categories.map((category) => (
+                  <span key={category} className={styles.categoryItem}>
+                    {category}
+                  </span>
+                ))}
+              </div>
+            </li>
+          ))}
       </ul>
     </Container>
   );
