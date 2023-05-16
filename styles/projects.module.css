@@ -4,6 +4,11 @@
   margin-bottom: 24px;
 }
 
+.subtitle {
+  font-weight: 400;
+  font-size: 24px;
+}
+
 .projectName {
   font-size: 22px;
 }

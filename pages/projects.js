@@ -13,10 +13,10 @@ const Projects = () => {
 
   return (
     <Container>
-      {projects.length === 0 && (
-        <h4 className={styles.title}>Please add your first project</h4>
-      )}
       <h4 className={styles.title}>Projects</h4>
+      {projects.length === 0 && (
+        <h4 className={styles.subtitle}>Please add your first project</h4>
+      )}
       <ul>
         {projects.length &&
           projects?.map((project, i) => (
