@@ -5,7 +5,7 @@ import { categories, goals, launchMethod } from "../utils/helpers";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const Index = () => {
-  const [setValue] = useLocalStorage("projects", "");
+  const [value, setValue] = useLocalStorage("projects", "");
   const [showFrom, setShowForm] = useState(1);
   const [formValues, setFormValues] = useState({
     projectName: "",
@@ -279,7 +279,7 @@ const Index = () => {
               <button
                 className={styles.btnPrimary}
                 onClick={(e) => {
-                  e.preventDefault;
+                  e.preventDefault();
                   if (
                     formValues.projectName &&
                     formValues.projectUrl.length > 15
