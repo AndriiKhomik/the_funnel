@@ -28,8 +28,7 @@ const Index = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    // e.preventDefault();
+  const handleSubmit = () => {
     if (formValues.email && formValues.workers > 0) {
       setValue((prev) => [...prev, { ...formValues }]);
       setFormValues({
@@ -313,7 +312,7 @@ const Index = () => {
             )}
             {showFrom === 3 && (
               <button
-                onClick={(e) => handleSubmit(e)}
+                onClick={handleSubmit}
                 className={`${styles.btnPrimary} ${styles.btnContinue}`}
               >
                 Create Project
