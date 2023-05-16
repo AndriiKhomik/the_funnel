@@ -10,9 +10,12 @@ const Projects = () => {
   useEffect(() => {
     setProjects(value);
   }, []);
-  console.log(projects);
+
   return (
     <Container>
+      {!projects.length && (
+        <h4 className={styles.title}>Please add your first project</h4>
+      )}
       <h4 className={styles.title}>Projects</h4>
       <ul>
         {projects.map((project, i) => (

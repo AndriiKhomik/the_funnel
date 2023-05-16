@@ -29,7 +29,7 @@ const Index = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if (formValues.email && formValues.workers > 0) {
       setValue((prev) => [...prev, { ...formValues }]);
       setFormValues({
