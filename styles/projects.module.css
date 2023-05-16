@@ -11,6 +11,14 @@
 
 .projectName {
   font-size: 22px;
+  color: #2b8ce5;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 340px);
+  gap: 32px;
+  justify-content: center;
 }
 
 .listItem {
@@ -22,20 +30,30 @@
   margin-bottom: 12px;
 }
 
-.link {
+.linkWrapper {
+  display: block;
+  margin-bottom: 24px;
+  position: relative;
   color: #ffffff;
+  cursor: pointer;
+
+  transition: all 250ms ease-in;
 }
 
-.linkWrapper {
-  margin-bottom: 24px;
+.linkWrapper:hover {
+  color: #8fc9ff;
+}
+
+.listItem > div {
+  margin-bottom: 4px;
 }
 
 .linkWrapper::after {
   content: "";
   position: absolute;
-  bottom: 146px;
+  bottom: -14px;
   left: 0;
-  width: 94%;
+  width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-left: 50%;
@@ -52,7 +70,8 @@
   line-height: 20px;
   border-radius: 16px;
   padding: 6px 12px;
-  border: 1px solid #ffffff;
+  border: 1px solid #2b8ce5;
+  color: #2b8ce5;
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 8px;
