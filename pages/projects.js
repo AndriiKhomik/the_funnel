@@ -9,7 +9,7 @@ const Projects = () => {
 
   useEffect(() => {
     setProjects(value);
-  }, []);
+  }, [value]);
 
   return (
     <Container>
