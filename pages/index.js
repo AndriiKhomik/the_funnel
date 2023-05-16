@@ -2,8 +2,10 @@ import { useState } from "react";
 import Container from "../components/Container";
 import styles from "../styles/index.module.css";
 import { categories, goals, launchMethod } from "../utils/helpers";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const Index = () => {
+  const [setValue] = useLocalStorage("projects", "");
   const [showFrom, setShowForm] = useState(1);
   const [formValues, setFormValues] = useState({
     projectName: "",
@@ -29,7 +31,17 @@ const Index = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formValues.email && formValues.workers > 0) {
-      console.log(formValues);
+      setValue((prev) => [...prev, { ...formValues }]);
+      setFormValues({
+        projectName: "",
+        projectUrl: "Alphaguilty.io/",
+        categories: [],
+        goal: "Understand My Members",
+        workers: 0,
+        launchMethod: "Pre Product",
+        email: "",
+      });
+      setShowForm(1);
     }
   };
 
@@ -114,6 +126,7 @@ const Index = () => {
               Create Project
             </div>
           </div>
+          <div className={styles.bg}></div>
         </div>
         <div className={styles.form}>
           {showFrom == 1 && (

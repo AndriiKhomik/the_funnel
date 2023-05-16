@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .subtitle {
@@ -211,6 +212,16 @@
   }
   .btnContinue {
     padding: 12px 118px;
+  }
+  .bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    height: 140px;
+    background-image: url("../img/bg.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
   .textColorWhite {
     color: #ffffff;
