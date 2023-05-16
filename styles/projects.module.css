@@ -34,10 +34,12 @@
   content: "";
   position: absolute;
   top: 75px;
-  left: 22px;
+  left: 0;
   width: 94%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .categoryTitle {
