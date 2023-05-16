@@ -33,7 +33,7 @@
 .linkWrapper::after {
   content: "";
   position: absolute;
-  top: 75px;
+  bottom: 146px;
   left: 0;
   width: 94%;
   height: 1px;
