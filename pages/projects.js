@@ -21,8 +21,17 @@ const Projects = () => {
         {projects.length &&
           projects.map((project, i) => (
             <li key={`${project.projectName}-${i}`} className={styles.listItem}>
-              <div>Project name: {project.projectName}</div>
-              <div>Project Url: {project.projectUrl}</div>
+              <div className={styles.projectName}>{project.projectName}</div>
+              <div className={styles.linkWrapper}>
+                Go to project page:{" "}
+                <a
+                  className={styles.link}
+                  href={`https://${project.projectUrl}`}
+                  target="_blank"
+                >
+                  {project.projectUrl}
+                </a>
+              </div>
               <div>email: {project.email}</div>
               <div>Project goal: {project.goal}</div>
               <div>Workers amount: {project.workers}</div>

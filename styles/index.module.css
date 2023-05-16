@@ -94,10 +94,12 @@
   margin-top: 24px;
   margin-bottom: 24px;
   color: #101313;
+  cursor: pointer;
 }
 
 .btnContinue {
   padding: 12px 42px;
+  cursor: pointer;
 }
 
 .radio {
@@ -119,6 +121,7 @@
   color: #fafafa;
   border: none;
   margin-right: 32px;
+  cursor: pointer;
 }
 
 .workersCountWrapper {
@@ -148,6 +151,7 @@
   border: none;
   border-radius: 10px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .textColorWhite {
@@ -212,6 +216,7 @@
   }
   .btnContinue {
     padding: 12px 118px;
+    cursor: pointer;
   }
   .bg {
     position: absolute;

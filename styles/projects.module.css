@@ -4,12 +4,35 @@
   margin-bottom: 24px;
 }
 
+.projectName {
+  font-size: 22px;
+}
+
 .listItem {
+  position: relative;
   list-style-type: none;
   padding: 12px 24px;
   border: 1px solid #ffffff;
   border-radius: 10px;
   margin-bottom: 12px;
+}
+
+.link {
+  color: #ffffff;
+}
+
+.linkWrapper {
+  margin-bottom: 24px;
+}
+
+.linkWrapper::after {
+  content: "";
+  position: absolute;
+  top: 75px;
+  left: 22px;
+  width: 94%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .categoryTitle {
